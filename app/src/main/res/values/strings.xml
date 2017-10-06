@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">GoodAir</string>
+    <!--Login page-->
+    <string name="username">请输入用户名</string>
+    <string name="password">请输入密码</string>
+    <string name="login">登陆</string>
+    <string name="weilan_tiankong">威蓝天空</string>
+
+    <string name="fragment_real">实时数据</string>
+    <string name="fragment_site">监测数据</string>
+    <string name="fragment_rang">排行榜</string>
+    <!--主页面-->
+    <string name="time">[发布时间：</string>
+    <string name="fbsj">00:00</string>
+    <string name="time_right">]</string>
+    <string name="pullount">首要污染物:</string>
+    <string name="pm25">pm2.5</string>
+    <string name="aqi_main">25</string>
+    <string name="aqi_content">AQI指数</string>
+    <string name="aqi_lod">/ 500</string>
+    <string name="address">北京市</string>
+    <string name="main_air_quantity">优</string>
+    <string name="pullent_main">污染物实时数据</string>
+    <string name="pollute_pm2.5">PM2.5</string>
+    <string name="pollute_keli">细颗粒物</string>
+    <string name="pollute_number">100</string>
+    <string name="pollute_pm10">PM10</string>
+    <string name="pollute_pm10_keli">颗粒物</string>
+    <string name="pollute_pm10_text">60</string>
+    <string name="pollute_no2">NO2</string>
+    <string name="pollute_no2_text">二氧化氮</string>
+    <string name="pollute_no2_number">30</string>
+    <string name="pollute_so">SO2</string>
+    <string name="pollute_so_text">二氧化硫</string>
+    <string name="pollute_so_number_a">15</string>
+    <string name="pollute_o3">O3</string>
+    <string name="pollute_o3_text">臭氧</string>
+    <string name="temperature_text">温度</string>
+    <string name="humidity_main_text">湿度</string>
+    <string name="wind_main_text">风向</string>
+    <string name="pollute_o3_number">20</string>
+    <string name="pollute_co">CO</string>
+    <string name="pollute_co_text">一氧化碳</string>
+    <string name="pollute_co_number">30</string>
+    <string name="txt_temp">温度</string>
+    <string name="txt_temp_top">25℃</string>
+</resources>

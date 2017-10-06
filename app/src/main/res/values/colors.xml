@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray">#f5f5f5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="theme_color">#2B98f0</color>
+    <!--头布局滑动-->
+    <color name="orange">#ff9900</color>
+    <color name="viewfinder_frame">#FF42a5f6</color>
+    <color name="whites">#ffffff</color>
+    <!--主页面  污染物6个等级-->
+    <color name="ui_home_view_bg">#40001324</color>
+    <!-- 检测数据污染物6个等级颜色 -->
+    <color name="excellent">#68A14A</color>
+    <color name="good">#FFFF00</color>
+    <color name="Slightpollution">#FF7E00</color>
+    <color name="Moderatepollution">#FF0000</color>
+    <color name="Severepollution">#99004C</color>
+    <color name="Seriouspollution">#7E0023</color>
+    <color name="fragment_site_color_lan">#FF42a5f6</color>
+
+</resources>

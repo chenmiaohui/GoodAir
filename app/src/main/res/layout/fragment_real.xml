@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<air.chenmh.com.util.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ui_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:id="@+id/uihomelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+
+        <RelativeLayout
+            android:id="@+id/ll_fbsj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布时间:"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/fbsj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbsj"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:gravity="center"
+            android:layout_below="@+id/ll_fbsj">
+
+            <LinearLayout
+                android:id="@+id/real_val"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/main_area_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/address"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/main_aqi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/aqi_main"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="60sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AQI"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/statte_color"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/uicornerbg_air_green"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/main_air_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_air_quantity"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pullount"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/main_major_pollute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pm25"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/temperature_main"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/temperature_text"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/top_temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:text="@string/txt_temp_top"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/humidity_main"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/humidity_main_text"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/top_humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:text="50%"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/wind_main"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wind_main_text"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/top_wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            android:text="东北风2级"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pollute"
+            android:layout_width="fill_parent"
+            android:layout_height="260dp"
+            android:layout_below="@+id/ll_main"
+            android:background="@color/ui_home_view_bg"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/pullent_main"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:id="@+id/textView">
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:paddingRight="12dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/pollute_pm25_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pollute_number"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="μg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/pollute_pm2.5_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_pm2.5"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_pm25_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_pm25_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                    <!--<TextView
+                        android:id="@+id/pollute_pm2.5_nr_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/pollute_pm2.5_txt"
+                        android:text="@string/pollute_keli"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />-->
+                    <TextView
+                        android:textIsSelectable="true"
+                        android:id="@+id/progressBar_pm25"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/pollute_pm2.5_nr_txt"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/pollute_pm10_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progressBar_pm10"
+                            android:layout_alignBaseline="@+id/pollute_pm10_nr_txt"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/pollute_pm10_text"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="μg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pollute_pm10_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_pm10"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_pm10_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_pm10_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                    <!--  <TextView
+                          android:id="@+id/pollute_pm10_nr_txt"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentLeft="true"
+                          android:layout_below="@+id/pollute_pm10_txt"
+                          android:text="@string/pollute_pm10_keli"
+                          android:textColor="@color/white"
+                          android:textSize="15sp" />-->
+
+                    <TextView
+                        android:id="@+id/progressBar_pm10"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textIsSelectable="true"
+                        android:layout_below="@+id/pollute_pm10_nr_txt"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/pollute_o3_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progressBar_o3"
+                            android:layout_alignBaseline="@+id/pollute_o3_nr_txt"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/pollute_o3_number"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="μg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pollute_o3_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_o3"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_o3_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_o3_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                    <!-- <TextView
+                         android:id="@+id/pollute_o3_nr_txt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_below="@+id/pollute_o3_txt"
+                         android:text="@string/pollute_o3_text"
+                         android:textColor="@color/white"
+                         android:textSize="15sp" />-->
+
+                    <TextView
+                        android:id="@+id/progressBar_o3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textIsSelectable="true"
+                        android:layout_below="@+id/pollute_o3_nr_txt"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/pollute_no2_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progressBar_no2"
+                            android:layout_alignBaseline="@+id/pollute_no2_nr_txt"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/pollute_no2_number"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="μg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pollute_no2_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_no2"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_no2_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_no2_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+                    <!-- <TextView
+                         android:id="@+id/pollute_no2_nr_txt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_below="@+id/pollute_no2_txt"
+                         android:text="@string/pollute_no2_text"
+                         android:textColor="@color/white"
+                         android:textSize="15sp" />-->
+
+                    <TextView
+                        android:textIsSelectable="true"
+                        android:id="@+id/progressBar_no2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/pollute_no2_nr_txt"
+                        android:layout_marginTop="5dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/pollute_so2_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progressBar_so2"
+                            android:layout_alignBaseline="@+id/pollute_so2_nr_txt"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/pollute_so_number_a"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="μg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pollute_so2_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_so"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_so2_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_so2_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+                    <!-- <TextView
+                         android:id="@+id/pollute_so2_nr_txt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_below="@+id/pollute_so2_txt"
+                         android:text="@string/pollute_so_text"
+                         android:textColor="@color/white"
+                         android:textSize="15sp" />-->
+
+                    <TextView
+                        android:textIsSelectable="true"
+                        android:id="@+id/progressBar_so2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/pollute_so2_nr_txt"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/pollute_co_value_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progressBar_co"
+                            android:layout_alignBaseline="@+id/pollute_co_nr_txt"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/pollute_co_number"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mg/m3"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/pollute_co_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pollute_co"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pollute_co_color"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pullent_real_six"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/pollute_co_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_air_quantity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/progressBar_co"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:textIsSelectable="true"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/pollute_co_nr_txt"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</air.chenmh.com.util.MyScrollView>

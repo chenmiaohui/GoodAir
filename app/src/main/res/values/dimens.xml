@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 中间隔20 ~ 24px -->
+    <dimen name="middle_space">14dp</dimen>
+    <dimen name="middlerr_space">12dp</dimen>
+    <dimen name="middler_space">10dp</dimen>
+    <dimen name="normal_textSize">16sp</dimen>
+    <!--滑动头-->
+    <dimen name="tab_height">45dp</dimen>
+    <dimen name="cursor_height">3dp</dimen>
+    <dimen name="slidingmenu_offset">80dp</dimen>
+</resources>
